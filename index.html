@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Alejandro Mato Gómez - Desarrollador Web Junior especializado en animaciones modernas con HTML, CSS y JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="desarrollador web, frontend, HTML, CSS, JavaScript, animaciones, portfolio"
+    />
+    <meta name="author" content="Alejandro Mato" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Alejandro Mato Gómez | Desarrollador Web"
+    />
+    <meta
+      property="og:description"
+      content="Desarrollador web junior especializado en animaciones modernas con HTML, CSS y JavaScript."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Alejandro Mato Gómez | Desarrollador Web"
+    />
+    <meta
+      name="twitter:description"
+      content="Desarrollador web junior especializado en animaciones modernas."
+    />
+
+    <title>Alejandro Mato | Desarrollador Web Junior</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Skip Link para accesibilidad -->
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">Saltar al contenido principal</a>
+
+    <!-- Background Animation (decorativo, aria-hidden) -->
+    <div class="bg-animation" aria-hidden="true"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header>
+      <nav id="navbar" data-i18n-attr="aria-label:nav_aria" aria-label="Navegación principal">
+        <a href="#inicio" class="logo" data-i18n-attr="aria-label:logo_aria" aria-label="Alexx0012 - Inicio">
+          <span aria-hidden="true"></span>
+          <span>&lt; @lexx0012 /&gt;</span>
+        </a>
+
+        <button
+          class="lang-switcher"
+          data-i18n-attr="aria-label:lang_aria"
+          aria-label="Cambiar idioma"
+          type="button"
+        >
+          <svg class="lang-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20"/>
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+          <span class="lang-text">EN</span>
+        </button>
+
+        <button
+          class="mobile-menu-btn"
+          data-i18n-attr="aria-label:menu_btn_aria"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          id="menu-toggle"
+        >
+          <span class="menu-icon" aria-hidden="true">☰</span>
+          <span class="menu-close" aria-hidden="true">✕</span>
+          <span class="sr-only" data-i18n="menu_sr">Menú</span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+          <li><a href="#sobre-mi" data-i18n="nav_sobre_mi">Sobre Mí</a></li>
+          <li>
+            <a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a>
+          </li>
+          <li>
+            <a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+          </li>
+          <li><a href="#logros" data-i18n="nav_logros">Logros</a></li>
+          <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+      <!-- ===== HERO SECTION ===== -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="floating-shape shape-1" aria-hidden="true"></div>
+        <div class="floating-shape shape-2" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <div class="hero-badge" data-i18n-attr="aria-label:hero_badge" aria-label="Disponible para proyectos">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-i18n="hero_badge">Disponible para proyectos</span>
+          </div>
+
+          <h1 id="hero-title">
+            <span data-i18n="hero_title">Hola, soy</span> <span class="gradient-text">Alejandro Mato</span><br />
+            <span class="visually-hidden" data-i18n="hero_typing_aria">Profesiones: </span>
+            <span id="typing" aria-live="polite" aria-atomic="true"></span>
+          </h1>
+
+          <p class="hero-description" data-i18n="hero_description">
+            Desarrollador web junior entusiasta, especializado en crear
+            experiencias digitales modernas con animaciones fluidas y diseño
+            vanguardista. Motivado por aprender y crecer en el sector
+            tecnológico.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#proyectos" class="btn btn-secondary" data-i18n="hero_btn_proyectos">
+              Ver Proyectos
+            </a>
+            <a href="#contacto" class="btn btn-secondary" data-i18n="hero_btn_contacto">Contactar</a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section id="sobre-mi" aria-labelledby="about-title">
+        <div class="section-header fade-in">
+          <span class="section-tag" data-i18n="about_tag">Sobre Mí</span>
+          <h2 id="about-title" class="section-title" data-i18n="about_title">Conóceme mejor</h2>
+          <p class="section-subtitle" data-i18n="about_subtitle">
+            De la industria tradicional al mundo digital, una transición
+            impulsada por la pasión por la tecnología.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image fade-in">
+            <figure class="image-frame">
+              <div class="placeholder-text">
+                <video autoplay muted loop playsinline>
+  <source src="assets/video/alexx0012.mp4" type="video/mp4">
+</video>
+              </div>
+              <figcaption class="sr-only" data-i18n="video_caption">
+                Video de perfil de Alejandro Mato Gómez, desarrollador web
+                junior
+              </figcaption>
+            </figure>
+
+            <div
+              class="about-stats"
+              role="list"
+              data-i18n-attr="aria-label:stat_about_aria"
+              aria-label="Estadísticas profesionales"
+            >
+              <div class="stat-card" role="listitem">
+                <div class="stat-number" data-count="28" data-i18n-attr="aria-label:stat_years_aria" aria-label="28 años">
+                  0
+                </div>
+                <div class="stat-label" data-i18n="stat_years_label">Años de experiencia</div>
+              </div>
+              <div class="stat-card" role="listitem">
+                <div
+                  class="stat-number"
+                  data-count="3"
+                  data-i18n-attr="aria-label:stat_techs_aria"
+                  aria-label="3 tecnologías"
+                >
+                  0
+                </div>
+                <div class="stat-label" data-i18n="stat_techs_label">Tecnologías web</div>
+              </div>
+              <div class="stat-card" role="listitem">
+                <div class="stat-number" data-count="2" data-i18n-attr="aria-label:stat_langs_aria" aria-label="2 idiomas">
+                  0
+                </div>
+                <div class="stat-label" data-i18n="stat_langs_label">Idiomas nativos</div>
+              </div>
+              <div class="stat-card" role="listitem">
+                <div
+                  class="stat-number"
+                  data-count="100"
+                  data-i18n-attr="aria-label:stat_commitment_aria"
+                  aria-label="100 por ciento"
+                >
+                  0
+                </div>
+                <div class="stat-label" data-i18n="stat_commitment_label">% Compromiso</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text fade-in">
+            <h3 data-i18n="about_heading">Transformando mi pasión en código</h3>
+            <p data-i18n-html="about_p1">
+              Durante 28 años trabajé en el sector industrial en
+              <strong>TROMOSA</strong>, desarrollando habilidades transferibles
+              como la resolución de problemas, organización, disciplina y
+              trabajo en equipo. Ahora aplico esa misma dedicación al desarrollo
+              web.
+            </p>
+            <p data-i18n-html="about_p2">
+              Me especializo en crear
+              <strong>páginas web modernas con muchas animaciones</strong>,
+              utilizando <strong>HTML, CSS y JavaScript</strong> y herramientas
+              modernas de diseño web. Cada proyecto es una oportunidad para
+              crear experiencias visuales impactantes y funcionales.
+            </p>
+
+            <h4 class="skills-heading" data-i18n="about_skills_heading">Habilidades técnicas</h4>
+            <ul
+              class="skills-list"
+              role="list"
+              data-i18n-attr="aria-label:skills_aria"
+              aria-label="Lista de habilidades"
+            >
+              <li class="skill-tag" role="listitem" data-i18n="skill_html">HTML5</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_css">CSS3</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_js">JavaScript</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_anim">Animaciones CSS</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_resp">Responsive Design</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_ui">UI/UX</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_git">Git</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_team">Trabajo en equipo</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_problems">Resolución de problemas</li>
+              <li class="skill-tag" role="listitem" data-i18n="skill_detail">Atención al detalle</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE SECTION ===== -->
+      <section
+        class="experience-section"
+        id="experiencia"
+        aria-labelledby="exp-title"
+      >
+        <div class="section-header fade-in">
+          <span class="section-tag" data-i18n="exp_tag">Experiencia</span>
+          <h2 id="exp-title" class="section-title" data-i18n="exp_title">Mi trayectoria</h2>
+          <p class="section-subtitle" data-i18n="exp_subtitle">
+            Una carrera marcada por la constancia y el aprendizaje continuo.
+          </p>
+        </div>
+
+        <div
+          class="timeline"
+          role="list"
+          data-i18n-attr="aria-label:timeline_aria"
+          aria-label="Línea de tiempo de experiencia profesional"
+        >
+          <div class="timeline-item fade-in" role="listitem">
+            <div class="timeline-content">
+              <time class="timeline-date" datetime="2026" data-i18n="exp_1_date"
+                >2026 - Actualidad</time
+              >
+              <h3 class="timeline-title" data-i18n="exp_1_title">Desarrollador Web Junior</h3>
+              <p class="timeline-company" data-i18n="exp_1_company">Formación y proyectos personales</p>
+              <div class="timeline-desc">
+                <ul>
+                  <li data-i18n="exp_1_item_1">Desarrollo de páginas web con HTML, CSS y JS</li>
+                  <li data-i18n="exp_1_item_2">Animaciones modernas y diseño responsive</li>
+                  <li data-i18n="exp_1_item_3">Proyectos personales en crecimiento</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline-item fade-in" role="listitem">
+            <div class="timeline-content">
+              <time class="timeline-date" datetime="1996-10" data-i18n="exp_2_date"
+                >Oct 1996 - 2025</time
+              >
+              <h3 class="timeline-title" data-i18n="exp_2_title">Montaje y Ajuste</h3>
+              <p class="timeline-company" data-i18n="exp_2_company">
+                TROMOSA - Fábrica de Moldes, España
+              </p>
+              <div class="timeline-desc">
+                <ul>
+                  <li data-i18n="exp_2_item_1">Ensamblaje y ajuste de moldes con precisión</li>
+                  <li data-i18n="exp_2_item_2">Revisión de medidas y control de calidad</li>
+                  <li data-i18n="exp_2_item_3">Mantenimiento de procesos y colaboración</li>
+                  <li data-i18n="exp_2_item_4">Resolución de problemas y organización</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS SECTION ===== -->
+      <section id="proyectos" aria-labelledby="projects-title">
+        <div class="section-header fade-in">
+          <span class="section-tag" data-i18n="projects_tag">Proyectos</span>
+          <h2 id="projects-title" class="section-title" data-i18n="projects_title">Mis proyectos</h2>
+          <p class="section-subtitle" data-i18n="projects_subtitle">
+            Espacio para mostrar mi trabajo.
+          </p>
+        </div>
+
+          <div class="projects-grid" role="list" data-i18n-attr="aria-label:projects_aria" aria-label="Lista de proyectos">
+          <!-- Proyecto 1 -->
+          <div class="project-card fade-in" role="listitem">
+            <figure class="project-media">
+              <div
+                class="media-placeholder"
+                role="img"
+                data-i18n-attr="aria-label:project_1_media_aria"
+                aria-label="Captura de pantalla del portfolio personal"
+              >
+                <span><img src="assets/img/git.webp" data-i18n-attr="alt:project_1_img_alt" alt="Imagen de GitHub" /></span>
+              </div>
+              <figcaption class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/alexx0012"
+                    class="project-link"
+                    title="Ver código fuente en GitHub"
+                    data-i18n-attr="title:project_github_aria; aria-label:project_github_aria"
+                    aria-label="Ver código fuente en GitHub"
+                    target="_blank"
+                  >
+                   
+                   <svg
+                      width="18"
+                      height="18"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </figcaption>
+            </figure>
+            <div class="project-info">
+              <ul
+                class="project-tags"
+                role="list"
+                data-i18n-attr="aria-label:project_1_tags_aria"
+                aria-label="Tecnologías utilizadas"
+              >
+                <li class="project-tag" role="listitem">HTML</li>
+                <li class="project-tag" role="listitem">CSS</li>
+                <li class="project-tag" role="listitem">JavaScript</li>
+              </ul>
+              <h3 class="project-title" data-i18n="project_1_title">Mi GitHub</h3>
+              <p class="project-desc" data-i18n="project_1_desc">
+                Mi GitHub personal con animaciones modernas, diseños
+                responsive y efectos visuales avanzados usando solo HTML, CSS y
+                JS.
+              </p>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="project-card fade-in" role="listitem">
+            <figure class="project-media">
+              <div
+                class="media-placeholder"
+                role="img"
+                data-i18n-attr="aria-label:project_2_media_aria"
+                aria-label="Placeholder para próximo proyecto"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+                  />
+                </svg>
+                <span ><img src="assets/img/web.webp" data-i18n-attr="alt:project_2_img_alt" alt="Imagen de mi web" />Mi website en Infinityfree</span>
+              </div>
+              <figcaption class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://alexx0012.infinityfree.me/?i=1"
+                    class="project-link"
+                    title="Ver demo"
+                    data-i18n-attr="title:project_demo_aria; aria-label:project_demo_aria"
+                    aria-label="Ver demo del proyecto"
+                    target="_blank"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </figcaption>
+            </figure>
+            <div class="project-info">
+              <ul
+                class="project-tags"
+                role="list"
+                data-i18n-attr="aria-label:project_2_tags_aria"
+                aria-label="Tecnologías previstas"
+              >
+                <li class="project-tag" role="listitem">HTML</li>
+                <li class="project-tag" role="listitem">CSS</li>
+                <li class="project-tag" role="listitem">JS</li>
+              </ul>
+              <h3 class="project-title" data-i18n="project_2_title">Mi website</h3>
+              <p class="project-desc" data-i18n="project_2_desc">
+                Este sitio es mi portfolio personal: imita una tienda de flores para mostrar mis trabajos, pero no funciona como e-commerce (no hay ventas ni compras). Está hecho en WordPress y alojado en InfinityFree.
+
+              </p>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="project-card fade-in" role="listitem">
+            <figure class="project-media">
+              <div
+                class="media-placeholder"
+                role="img"
+                data-i18n-attr="aria-label:project_3_media_aria"
+                aria-label="Placeholder para próximo proyecto"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                  />
+                </svg>
+                <span data-i18n="project_3_placeholder">Futuros proyectos</span>
+              </div>
+              <figcaption class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="#proyectos"
+                    class="project-link"
+                    title="Ver demo"
+                    data-i18n-attr="title:project_demo_aria; aria-label:project_demo_aria"
+                    aria-label="Ver demo del proyecto"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </figcaption>
+            </figure>
+            <div class="project-info">
+              <ul
+                class="project-tags"
+                role="list"
+                data-i18n-attr="aria-label:project_3_tags_aria"
+                aria-label="Tecnologías previstas"
+              >
+                <li class="project-tag" role="listitem">HTML</li>
+                <li class="project-tag" role="listitem">CSS</li>
+                <li class="project-tag" role="listitem">JS</li>
+              </ul>
+              <h3 class="project-title" data-i18n="project_3_title">Futuros Proyectos</h3>
+              <p class="project-desc" data-i18n="project_3_desc">
+               Futuros projectos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ACHIEVEMENTS SECTION ===== -->
+      <section id="logros" aria-labelledby="achievements-title">
+        <div class="section-header fade-in">
+          <span class="section-tag" data-i18n="achievements_tag">Logros & Aptitudes</span>
+          <h2 id="achievements-title" class="section-title" data-i18n="achievements_title">
+            Lo que me define
+          </h2>
+          <p class="section-subtitle" data-i18n="achievements_subtitle">
+            Habilidades y logros que me convierten en un profesional
+            comprometido.
+          </p>
+        </div>
+
+        <div
+          class="achievements-grid"
+          role="list"
+          data-i18n-attr="aria-label:achievements_aria"
+          aria-label="Logros y aptitudes"
+        >
+          <div class="achievement-card fade-in" role="listitem">
+            <div class="achievement-icon" aria-hidden="true">🏆</div>
+            <h3 class="achievement-title" data-i18n="achievement_1_title">28 Años de Experiencia</h3>
+            <p class="achievement-desc" data-i18n="achievement_1_desc">
+              Más de dos décadas en el sector industrial desarrollando
+              disciplina, organización y trabajo en equipo.
+            </p>
+          </div>
+
+          <div class="achievement-card fade-in" role="listitem">
+            <div class="achievement-icon" aria-hidden="true">🚀</div>
+            <h3 class="achievement-title" data-i18n="achievement_2_title">Transición al Desarrollo Web</h3>
+            <p class="achievement-desc" data-i18n="achievement_2_desc">
+              Formación reciente en desarrollo web, iniciando una nueva etapa
+              profesional con mucha motivación.
+            </p>
+          </div>
+
+          <div class="achievement-card fade-in" role="listitem">
+            <div class="achievement-icon" aria-hidden="true">⚡</div>
+            <h3 class="achievement-title" data-i18n="achievement_3_title">Animaciones Modernas</h3>
+            <p class="achievement-desc" data-i18n="achievement_3_desc">
+              Especialización en crear páginas web con animaciones fluidas y
+              efectos visuales impactantes.
+            </p>
+          </div>
+
+          <div class="achievement-card fade-in" role="listitem">
+            <div class="achievement-icon" aria-hidden="true">🎯</div>
+            <h3 class="achievement-title" data-i18n="achievement_4_title">Atención al Detalle</h3>
+            <p class="achievement-desc" data-i18n="achievement_4_desc">
+              Precisión y cuidado en cada línea de código, heredado de mi
+              experiencia en control de calidad.
+            </p>
+          </div>
+
+          <div class="achievement-card fade-in" role="listitem">
+            <div class="achievement-icon" aria-hidden="true">🌍</div>
+            <h3 class="achievement-title" data-i18n="achievement_5_title">Bilingüe Nativo</h3>
+            <p class="achievement-desc" data-i18n="achievement_5_desc">
+              Español y Gallego nativos, facilitando la comunicación en entornos
+              multiculturales.
+            </p>
+          </div>
+
+          <div class="achievement-card fade-in" role="listitem">
+            <div class="achievement-icon" aria-hidden="true">💡</div>
+            <h3 class="achievement-title" data-i18n="achievement_6_title">Aprendizaje Rápido</h3>
+            <p class="achievement-desc" data-i18n="achievement_6_desc">
+              Capacidad demostrada para adaptarme y dominar nuevas tecnologías
+              en poco tiempo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section
+        class="contact-section"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
+        <div class="contact-content fade-in">
+          <span class="section-tag" data-i18n="contact_tag">Contacto</span>
+          <h2 id="contact-title" class="section-title" data-i18n="contact_title">¿Trabajamos juntos?</h2>
+          <p class="section-subtitle" data-i18n="contact_subtitle">
+            Estoy abierto a nuevas oportunidades y proyectos interesantes.
+            ¡Hablemos!
+          </p>
+
+          <address class="contact-info">
+            <a
+              href="mailto:&#97;&#108;&#101;&#120;&#120;&#48;&#48;&#49;&#50;&#48;&#48;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
+              class="contact-item"
+              aria-label="Enviar correo electrónico"
+            >
+              <svg
+                class="contact-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/34661575725?text=Hola%2C%20quiero%20más%20información"
+              target="_blank"
+              rel="noopener"
+              class="contact-item"
+              aria-label="Contactar por WhatsApp"
+            >
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                <path d="M9 10h.01"/>
+                <path d="M12 10h.01"/>
+                <path d="M15 10h.01"/>
+              </svg>
+            </a>
+          </address>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p><span data-i18n="footer_text">Hecho por Alejandro Mato</span> | <time id="year"></time></p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;" data-i18n="footer_nocookies">Esta web no usa cookies ni recoge datos personales.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
