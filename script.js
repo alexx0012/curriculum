@@ -257,6 +257,7 @@
     let i18nHtmls = [];
     let i18nAttrs = [];
     let langTextEl = null;
+    let langOptions = [];
     let metaCache = {};
 
     function getCurrentLang() {
@@ -274,6 +275,7 @@
             })
         }));
         langTextEl = document.querySelector('.lang-switcher .lang-text');
+        langOptions = Array.from(document.querySelectorAll('.lang-option'));
         metaCache = {
             metaDesc: document.querySelector('meta[name="description"]'),
             metaKeywords: document.querySelector('meta[name="keywords"]'),
@@ -283,6 +285,18 @@
             twitterTitle: document.querySelector('meta[name="twitter:title"]'),
             twitterDesc: document.querySelector('meta[name="twitter:description"]')
         };
+    }
+
+    function updateLanguageSelector(lang) {
+        for (const option of langOptions) {
+            const isActive = option.dataset.lang === lang;
+            option.classList.toggle('is-active', isActive);
+            option.setAttribute('aria-pressed', String(isActive));
+        }
+
+        if (langTextEl) {
+            langTextEl.textContent = lang === 'es' ? 'EN' : 'ES';
+        }
     }
 
     function translateTo(lang, restartType) {
@@ -314,7 +328,7 @@
         document.documentElement.lang = lang;
         CONFIG.typing.texts = t.typing_texts;
 
-        if (langTextEl) langTextEl.textContent = lang === 'es' ? 'EN' : 'ES';
+        updateLanguageSelector(lang);
 
         currentLang = lang;
         localStorage.setItem('lang', lang);
@@ -525,6 +539,12 @@
 
         document.addEventListener('keydown', e => {
             if (e.key === 'Escape') close();
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        const navLinks = $$('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', close);
         });
     }
 
